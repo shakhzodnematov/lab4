@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Exercise</title>
+</head>
+<body>
+
+  <script>
+    // Nom va qiymatni sahifaga va Console'ga chiqaradi
+    function print(label, value) {
+      const text = label + ": " + value;
+      console.log(text);
+      const p = document.createElement("p");
+      p.textContent = text;
+      document.body.appendChild(p);
+    }
+
+    // Sarlavha uchun (nom/qiymat juftligisiz)
+    function title(text) {
+      console.log(text);
+      const h = document.createElement("h3");
+      h.textContent = text;
+      document.body.appendChild(h);
+    }
+
+    // Q1
+    const heading = document.createElement("h1");
+    heading.textContent = "Welcome to JavaScript";
+    document.body.appendChild(heading);
+
+    // Q2
+    {
+      let studentName = "Shahzod";
+      let studentAge = 19; // haqiqiy yoshingizni yozing
+      const universityName = "Albukhary International University";
+
+      title("Q2");
+      print("studentName", studentName);
+      print("studentAge", studentAge);
+      print("universityName", universityName);
+    }
+
+    // Q3
+    {
+      let studentName = "Sarah";
+      let studentAge = 19;
+      let courseFee = 2500.50;
+      let isRegistered = true;
+      let studentAddress = null;
+
+      // 3a. Qiymatlar
+      title("Q3a: Values");
+      print("studentName", studentName);
+      print("studentAge", studentAge);
+      print("courseFee", courseFee);
+      print("isRegistered", isRegistered);
+      print("studentAddress", studentAddress);
+
+      // 3b. Data type'lar
+      title("Q3b: Data types");
+      print("studentName", typeof studentName);
+      print("studentAge", typeof studentAge);
+      print("courseFee", typeof courseFee);
+      print("isRegistered", typeof isRegistered);
+      print("studentAddress", typeof studentAddress);
+    }
+  </script>
+
+</body>
+</html>
